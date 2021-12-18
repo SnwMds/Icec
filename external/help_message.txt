@@ -1,0 +1,96 @@
+usage: icec [-h] [-v]
+            [--address ADDRESS]
+            [--port PORT]
+            [--mount-point MOUNT_POINT]
+            [--username USERNAME]
+            [--password PASSWORD]
+            [--yp-policy POLICY]
+            [--name NAME]
+            [--description DESCRIPTION]
+            [--url URL] [--genre GENRE]
+            [--bitrate BITRATE]
+            [--audio-info INFO]
+            [--content-type TYPE]
+            [--shuffle] [--repeat]
+            [--repeat-max N]
+            [--config-file FILE]
+            [<media-uri>, <media-path> ...]
+
+Icec is a command-line based source
+client for the Icecast streaming server
+
+positional arguments:
+  <media-uri>, <media-path>
+
+options:
+  -h, --help        show this help
+                    message and exit
+  -v, --version     show version number
+                    and exit
+
+Server:
+  --address ADDRESS
+                    address to connect
+                    to. [default:
+                    127.0.0.1]
+  --port PORT       port to connect to.
+                    [default: 8000]
+  --mount-point MOUNT_POINT
+                    mount point to send
+                    data to. [default:
+                    /stream]
+
+Authentication:
+  --username USERNAME
+                    set source username.
+                    [default: source]
+  --password PASSWORD
+                    set source password.
+                    [default: hackme]
+
+Stream:
+  --yp-policy POLICY
+                    set whether or not
+                    the mount point
+                    shoult be advertised
+                    to a YP directory.
+                    [default: 0]
+  --name NAME       set name of the
+                    stream
+  --description DESCRIPTION
+                    set description of
+                    the stream
+  --url URL         set url of the
+                    stream
+  --genre GENRE     set genre of the
+                    stream
+  --bitrate BITRATE
+                    set bitrate of the
+                    stream
+  --audio-info INFO
+                    set a key-value list
+                    of audio information
+                    about the stream
+  --content-type TYPE
+                    set content type of
+                    the stream.
+                    [default:
+                    audio/mpeg]
+  --shuffle         shuffle items of the
+                    playlist
+  --repeat          repeat the playlist
+                    when it ends
+  --repeat-max N    repeat the playlist
+                    at n times (requires
+                    --repeat)
+
+Configuration:
+  --config-file FILE
+                    read configuration
+                    from a .cfg file
+                    instead of command-
+                    line arguments
+
+Note, options that take an argument
+require a colon. E.g.
+--username:USERNAME
